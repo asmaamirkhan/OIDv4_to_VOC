@@ -41,7 +41,7 @@ for fname in ids:
         child_filename.text = fname +'.jpg'
 
         child_path = SubElement(top,'path')
-        child_path.text = '/mnt/open_images_volume/' + fname +'.jpg'
+        child_path.text = os.path.join(args.sourcepath, fname + '.jpg')
 
         child_source = SubElement(top,'source')
         child_database = SubElement(child_source, 'database')
